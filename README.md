@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Overview
+This bot: <br>
+✅ Receives files (PDF, DOCX) via WhatsApp <br>
+✅ Sends the file to DeepL for translation <br>
+✅ Replies back to the sender on WhatsApp <br>
 
-## Getting Started
-
-First, run the development server:
-
+# ⚙ Setup
+### 1️⃣ Clone the repository & install dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repo-link>
+cd whatsapp-translator-bot
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Create ```.env```
+Fill it with:
+```bash
+TWILIO_ACCOUNT_SID=your_twilio_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+TWILIO_NUMBER=+14155238886
+DEEPL_API_KEY=your_deepl_api_key
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3️⃣ Run local development server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4️⃣ Expose local server using ngrok
+```bash
+ngrok http 3000
+```
+Get the public URL from ngrok, e.g., ```https://abc123.ngrok.io```.
 
-## Learn More
+### 5️⃣ Configure Twilio webhook
+Go to Twilio Dashboard → WhatsApp Sandbox → Sandbox Configuration
+Set:
+```bash
+WHEN A MESSAGE COMES IN → https://abc123.ngrok.io/api/webhook
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 6️⃣ Link your WhatsApp to the sandbox
+Follow the instructions in the Twilio sandbox, send:
+```bash
+join <sandbox-code>
+```
+to the Twilio number.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 🧪 Testing
+✅ Send a PDF or DOCX file to the WhatsApp sandbox number. <br>
+✅ The bot will process the document and send a confirmation message when done. <br>
+⚠ Note: Currently, the bot only sends a text confirmation. Sending back the translated file as an attachment requires an additional storage setup (e.g., S3 or ImageKit).
