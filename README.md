@@ -10,6 +10,9 @@
     <img src="https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=Twilio&logoColor=white" alt="twilio" />
   </div>
 
+  <br />
+  <br />
+
   BeeLingo is a WhatsApp bot that helps you translate documents (PDF, DOCX) across languages in just a few seconds. Like a busy bee, it works tirelessly to deliver smooth, accurate translations right to your chat. 🐝🌍
 </div>
 
