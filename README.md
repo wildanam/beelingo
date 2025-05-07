@@ -11,9 +11,8 @@
   </div>
 
   <br />
-  <br />
 
-  BeeLingo is a WhatsApp bot that helps you translate documents (PDF, DOCX) across languages in just a few seconds. Like a busy bee, it works tirelessly to deliver smooth, accurate translations right to your chat. 🐝🌍
+  Beelingo is a WhatsApp bot that helps you translate documents (PDF, DOCX) across languages in just a few seconds. Like a busy bee, it works tirelessly to deliver smooth, accurate translations right to your chat. 🐝🌍
 </div>
 
 # 🚀 Overview

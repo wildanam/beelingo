@@ -9,13 +9,12 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: #d4d;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0e0f11;
     --foreground: #ededed;
   }
 }
@@ -23,5 +22,28 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-inter;
+  }
+}
+
+@layer utilities {
+  .hero-btn {
+    @apply px-8 py-3 rounded-xl text-sm md:text-base font-semibold text-black bg-yellow-500 cursor-pointer hover:bg-yellow-400 transition-all duration-200;
+  }
+
+  .btn {
+    @apply px-3 py-1.5 rounded-lg font-semibold text-xs cursor-pointer transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply text-black bg-yellow-500 border border-yellow-700 hover:bg-yellow-400 hover:border-yellow-600;
+  }
+
+  .btn-outline {
+    @apply border border-background hover:border-gray-600;
+  }
 }

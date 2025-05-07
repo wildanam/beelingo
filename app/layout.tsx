@@ -1,20 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
-  title: "BeeLingo",
-  description: "WhatsApp Document Translator",
+  title: "Beelingo — WhatsApp Document Translator",
+  description: "Beelingo is a WhatsApp bot that helps you translate documents (PDF, DOCX) across languages in just a few seconds. Like a busy bee, it works tirelessly to deliver smooth, accurate translations right to your chat.",
 };
 
 export default function RootLayout({
@@ -25,9 +21,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
-        {children}
+        <div className="relative">
+          <Header />
+          <main>
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
