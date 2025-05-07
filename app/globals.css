@@ -31,6 +31,39 @@ body {
 }
 
 @layer utilities {
+  .translate-container {
+    @apply bg-amber-50 p-2 rounded-lg md:p-3 md:rounded-xl relative;
+  }
+
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  .translate-container::after {
+    content: "";
+    position: absolute;
+    height: calc(100% + 12px);
+    width: calc(100% + 12px);
+    background-image: conic-gradient(from var(--angle), oklch(79.5% 0.184 86), oklch(79.5% 0.184 206), oklch(79.5% 0.184 326), oklch(79.5% 0.184 86));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 12px;
+    animation: rotateGradient 3s linear infinite;
+  }
+
+  @keyframes rotateGradient {
+    from {
+      --angle: 0deg;
+    }
+    to {
+      --angle: 360deg;
+    }
+  }
+
   .hero-btn {
     @apply px-8 py-3 rounded-xl text-sm md:text-base font-semibold text-black bg-yellow-500 cursor-pointer hover:bg-yellow-400 transition-all duration-200;
   }

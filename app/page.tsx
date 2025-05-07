@@ -8,7 +8,7 @@ export default function Home() {
         <h1 className="text-4xl md:text-7xl font-medium">WhatsApp Document<br /> Translator</h1>
         <p className="leading-relaxed">Beelingo is a fast and reliable WhatsApp bot that helps you translate documents (PDF, DOCX) across languages in just a few seconds. Like a busy bee, it works tirelessly to deliver smooth, accurate translations right to your chat.</p>
       </div>
-      <div className="bg-amber-50 ring-4 ring-yellow-500 p-2 rounded-lg md:p-3 md:rounded-xl">
+      <div className="translate-container">
         <div className="flex gap-10 md:gap-40 items-center">
           <p className="text-gray-500">your_document.pdf</p>
           <button className="hero-btn">Translate</button>
