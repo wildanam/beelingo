@@ -65,7 +65,7 @@ body {
   }
 
   .hero-btn {
-    @apply px-8 py-3 rounded-xl text-sm md:text-base font-semibold text-black bg-yellow-500 cursor-pointer hover:bg-yellow-400 transition-all duration-200;
+    @apply px-4 md:px-8 py-3 rounded-xl text-sm md:text-base font-semibold text-black bg-yellow-500 cursor-pointer hover:bg-yellow-400 transition-all duration-200;
   }
 
   .btn {
