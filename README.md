@@ -36,6 +36,10 @@ TWILIO_ACCOUNT_SID=your_twilio_sid
 TWILIO_AUTH_TOKEN=your_twilio_auth_token
 TWILIO_NUMBER=+14155238886
 DEEPL_API_KEY=your_deepl_api_key
+NEXT_PUBLIC_APP_URL=your_public_app_url
+IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key
+IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
+IMAGEKIT_URL_ENDPOINT=your_imagekit_url_endpoint
 ```
 
 ### 3️⃣ Run local development server

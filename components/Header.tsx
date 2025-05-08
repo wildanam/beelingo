@@ -9,7 +9,7 @@ const Header = () => {
         </div>
         <div className="flex items-center gap-1">
           <a href="https://github.com/wildanam/beelingo" target="_blank" className="btn btn-outline flex items-center"><FaGithub size={16} /></a>
-          <button className="btn btn-primary">Try for free</button>
+          <a href="https://wa.me/+14155238886" target="_blank" className="btn btn-primary">Try for free</a>
         </div>
       </div>
     </header>

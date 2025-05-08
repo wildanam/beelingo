@@ -7,8 +7,6 @@ export async function POST(request: Request) {
   const { from, mediaUrl, mediaType } = await request.json();
 
   try {
-    // (Isi semua proses panjang kamu di sini: download file, kirim ke DeepL, polling, dsb)
-
     await twilioClient.messages.create({
       body: 'Translation is complete! (sending of result files will be supported soon)',
       from: 'whatsapp:' + process.env.TWILIO_NUMBER,
