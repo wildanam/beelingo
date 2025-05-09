@@ -41,7 +41,7 @@ export async function POST(request: Request) {
   const deeplResponse = await fetch('https://api-free.deepl.com/v2/document', {
     method: 'POST',
     headers: { Authorization: `DeepL-Auth-Key ${process.env.DEEPL_API_KEY}` },
-    body: form as any,
+    body: form as any, // eslint-disable-line @typescript-eslint/no-explicit-any
   });
 
   const deeplData = await deeplResponse.json();

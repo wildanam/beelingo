@@ -4,7 +4,7 @@ import { Twilio } from 'twilio';
 const twilioClient = new Twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 export async function POST(request: Request) {
-  const { from, mediaUrl, mediaType } = await request.json();
+  const { from } = await request.json();
 
   try {
     await twilioClient.messages.create({
