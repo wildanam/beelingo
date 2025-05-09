@@ -32,7 +32,7 @@ body {
 
 @layer utilities {
   .translate-container {
-    @apply bg-amber-50 p-2 rounded-lg md:p-3 md:rounded-xl relative;
+    @apply w-[325px] md:w-[425px] bg-amber-50 p-2 rounded-lg md:p-3 md:rounded-xl relative;
   }
 
   @property --angle {
